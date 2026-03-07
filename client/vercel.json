@@ -1,9 +1,4 @@
 {
-  "buildCommand": "npm ci && npm run build",
-  "outputDirectory": "dist",
-  "devCommand": "vite",
-  "installCommand": "npm ci",
-  "env": {
-    "NODE_ENV": "development"
-  }
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "dist"
 }
