@@ -18,51 +18,61 @@ const services = [
     icon: <HiOutlineDocumentText />,
     title: 'Online Form Filling',
     description: 'Govt schemes, exam forms, scholarships & more.',
+    requirements: ['Aadhar card', 'Passport size photo', 'Application details'],
   },
   {
     icon: <HiOutlineBriefcase />,
     title: 'Job Applications',
     description: 'Apply for government & private job vacancies.',
+    requirements: ['Resume', 'Aadhar/PAN', 'Education certificates'],
   },
   {
     icon: <HiOutlineTicket />,
     title: 'Ticket Booking',
     description: 'Train, bus & flight ticket booking services.',
+    requirements: ['Travel date', 'ID proof (Aadhar/PAN/Voter ID)', 'Mobile number'],
   },
   {
     icon: <HiOutlineIdentification />,
     title: 'PAN & Aadhaar Services',
     description: 'New PAN, corrections, Aadhaar update & enrollment.',
+    requirements: ['Aadhar card', 'Proof of address', 'Passport-size photo'],
   },
   {
     icon: <HiOutlineCreditCard />,
     title: 'AEPS Services',
     description: 'Aadhaar Enabled Payment System – cash withdrawals.',
+    requirements: ['Aadhaar card', 'Registered mobile number', 'Biometric verification'],
   },
   {
     icon: <HiOutlineLibrary />,
     title: 'Bank Account Opening',
     description: 'Open savings accounts with major banks.',
+    requirements: ['Aadhar card', 'PAN card', 'Passport-size photos'],
   },
   {
     icon: <HiOutlineShieldCheck />,
     title: 'Insurance',
     description: 'Life, health & vehicle insurance assistance.',
+    requirements: ['Aadhaar/PAN', 'Vehicle details (for vehicle policy)', 'Medical history'],
   },
   {
     icon: <HiOutlineTruck />,
     title: 'Courier',
     description: 'Domestic & international courier services.',
+    requirements: ['Sender & receiver details', 'Package weight', 'ID proof'],
   },
   {
     icon: <HiOutlinePrinter />,
     title: 'Printing & Photocopy',
     description: 'Color/B&W printing, photocopy & lamination.',
+    requirements: ['Document file (PDF/JPG)', 'Print size', 'Copy count'],
   },
   {
     icon: <HiOutlineGlobe />,
     title: 'DL and Passport',
     description: 'Driving licence & passport application services.',
+    requirements: ['Aadhar/PAN', 'Passport-size photos', 'Address proof'],
   },
 ];
 

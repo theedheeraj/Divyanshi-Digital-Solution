@@ -14,12 +14,6 @@ export default function Navbar() {
     { to: '/contact', label: 'Contact' },
   ];
 
-  if (isAuthenticated) {
-    links.push({ to: '/admin/dashboard', label: 'Dashboard' });
-  } else {
-    links.push({ to: '/admin', label: 'Admin' });
-  }
-
   const active = (path) =>
     pathname === path
       ? 'text-white bg-primary-700 px-3 py-1.5 rounded-lg'
