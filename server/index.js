@@ -21,18 +21,34 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', name: 'Divyanshi Digital Solution API' });
 });
 
-// Connect to MongoDB and start server
-const PORT = process.env.PORT || 5000;
+// Connect to MongoDB once (for serverless, use cached connection)
+const connectDB = async () => {
+  if (mongoose.connection.readyState === 1) return;
 
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log('✅ MongoDB connected');
-    app.listen(PORT, () => {
-      console.log(`🚀 Server running on port ${PORT}`);
-    });
-  })
-  .catch((err) => {
-    console.error('❌ MongoDB connection error:', err.message);
-    process.exit(1);
+  await mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
   });
+  console.log('✅ MongoDB connected');
+};
+
+if (process.env.VERCEL) {
+  connectDB().catch((err) => {
+    console.error('❌ MongoDB connection error:', err.message);
+  });
+} else {
+  const PORT = process.env.PORT || 5000;
+  connectDB()
+    .then(() => {
+      app.listen(PORT, () => {
+        console.log(`🚀 Server running on port ${PORT}`);
+      });
+    })
+    .catch((err) => {
+      console.error('❌ MongoDB connection error:', err.message);
+      process.exit(1);
+    });
+}
+
+module.exports = app;
+
