@@ -13,8 +13,8 @@
   "routes": [
     { "src": "^/api/(.*)", "dest": "/server/index.js" },
     { "src": "^/assets/(.*)", "dest": "/client/assets/$1" },
-    { "src": "^/favicon\.ico$", "dest": "/client/favicon.ico" },
-    { "src": "^/robots\.txt$", "dest": "/client/robots.txt" },
+    { "src": "^/favicon\\.ico$", "dest": "/client/favicon.ico" },
+    { "src": "^/robots\\.txt$", "dest": "/client/robots.txt" },
     { "src": "^/admin/(.*)", "dest": "/client/index.html" },
     { "src": "^/((?!api/).*)$", "dest": "/client/index.html" }
   ]
